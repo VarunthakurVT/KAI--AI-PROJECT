@@ -1,0 +1,18 @@
+# ============================================================
+# Frontend Requirements
+# ============================================================
+# This frontend is a React + Vite + TypeScript application.
+# Node.js dependencies are managed via package.json (use npm/pnpm).
+#
+# To install Node.js dependencies:
+#   npm install
+#
+# This requirements.txt is intentionally minimal — it only lists
+# Python tooling needed for local scripting/utilities (if any).
+# Install with:  uv pip install -r requirements.txt
+# ============================================================
+
+# (No Python runtime dependencies for this frontend)
+# Add Python utilities below if needed, e.g.:
+# httpx>=0.27.0
+# python-dotenv>=1.0.0

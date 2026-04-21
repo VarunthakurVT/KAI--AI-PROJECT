@@ -1,0 +1,65 @@
+[project]
+name = "kai-backend"
+version = "1.0.0"
+description = "KAI Adaptive Learning System – FastAPI Backend"
+readme = "README.md"
+requires-python = ">=3.11"
+
+dependencies = [
+    # --- Core Framework ---
+    "fastapi>=0.110.0",
+    "uvicorn[standard]>=0.34.0",
+    "pydantic>=2.0.0",
+    "pydantic-settings>=2.7.0",
+    "python-dotenv>=1.0.1",
+    "python-multipart>=0.0.18",
+    # --- Database ---
+    "sqlalchemy[asyncio]>=2.0.36",
+    "asyncpg>=0.30.0",
+    "alembic>=1.14.0",
+    # --- Vector DB ---
+    "chromadb>=0.5.0,<1.0.0",
+    # --- Authentication ---
+    "python-jose[cryptography]>=3.3.0",
+    "passlib[bcrypt]>=1.7.4",
+    "bcrypt>=4.2.0",
+    # --- LLM / AI ---
+    "groq>=0.13.0",
+    "google-generativeai>=0.3.0",
+    "langchain>=0.3.14",
+    "langchain-groq>=0.2.4",
+    "langchain-core>=0.3.28",
+    # --- Embeddings (local) ---
+    "sentence-transformers>=3.3.0",
+    # --- RAG / Document Processing ---
+    "pypdf>=5.1.0",
+    "tiktoken>=0.8.0",
+    # --- Streaming (SSE) ---
+    "sse-starlette>=2.2.1",
+    # --- HTTP Client ---
+    "httpx>=0.28.0",
+    # --- Security / Rate Limiting ---
+    "slowapi>=0.1.9",
+    # --- Logging / Observability ---
+    "structlog>=24.4.0",
+    # --- Calendar / Time Handling ---
+    "pytz>=2024.1",
+    "pydantic-core>=2.0.0",
+    "aiosqlite>=0.20.0",
+    "chromadb>=0.5.0,<1.0.0 ; sys_platform != 'win32'",
+    "email-validator>=2.3.0",
+    "psycopg2-binary>=2.9.0",
+    "cryptography>=46.0.0",
+    "python-dateutil>=2.8.0",
+]
+
+[project.scripts]
+# Run the backend server
+serve = "uvicorn app.main:app --reload --host 0.0.0.0 --port 8000"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.24.0",
+    "httpx>=0.28.0",
+]

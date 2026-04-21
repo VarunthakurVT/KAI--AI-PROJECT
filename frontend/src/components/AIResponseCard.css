@@ -1,0 +1,202 @@
+/* ============================================
+   AI Response Card Styling
+   Matches the chatbot UI format from screenshot
+   ============================================ */
+
+.ai-response-card {
+  background: linear-gradient(135deg, #0f1419 0%, #1a1f2e 100%);
+  border-radius: 12px;
+  padding: 32px;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  margin: 16px 0;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Greeting text */
+.greeting-text {
+  font-size: 14px;
+  font-weight: 400;
+  color: #a0a0a0;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Main heading */
+.main-heading {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 24px 0 16px 0;
+  color: #ffffff;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.heading-icon {
+  font-size: 28px;
+  opacity: 0.8;
+  display: inline-block;
+}
+
+/* Main content text */
+.content-text {
+  font-size: 15px;
+  color: #d0d0d0;
+  line-height: 1.6;
+  margin: 16px 0 24px 0;
+  letter-spacing: 0.3px;
+}
+
+/* Follow-up question/call-to-action */
+.followup-text {
+  font-size: 14px;
+  color: #b0b0b0;
+  margin-top: 20px;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.followup-icon {
+  font-size: 16px;
+  opacity: 0.9;
+  display: inline-block;
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+
+@media (max-width: 768px) {
+  .ai-response-card {
+    padding: 24px;
+  }
+
+  .main-heading {
+    font-size: 28px;
+  }
+
+  .greeting-text {
+    font-size: 13px;
+  }
+
+  .content-text {
+    font-size: 14px;
+  }
+
+  .followup-text {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ai-response-card {
+    padding: 16px;
+  }
+
+  .main-heading {
+    font-size: 24px;
+  }
+
+  .greeting-text {
+    font-size: 12px;
+  }
+
+  .content-text {
+    font-size: 13px;
+  }
+
+  .followup-text {
+    font-size: 12px;
+  }
+}
+
+/* ============================================
+   Dark Mode Variations
+   ============================================ */
+
+.ai-response-card.dark-mode {
+  background: linear-gradient(135deg, #0a0e14 0%, #141820 100%);
+  border-color: rgba(255, 255, 255, 0.02);
+}
+
+.ai-response-card.light-mode {
+  background: linear-gradient(135deg, #f8f9fa 0%, #f0f1f3 100%);
+  color: #1a1a1a;
+  border-color: rgba(0, 0, 0, 0.05);
+}
+
+.ai-response-card.light-mode .greeting-text {
+  color: #666666;
+}
+
+.ai-response-card.light-mode .content-text {
+  color: #444444;
+}
+
+.ai-response-card.light-mode .followup-text {
+  color: #555555;
+}
+
+.ai-response-card.light-mode .main-heading {
+  color: #1a1a1a;
+}
+
+/* ============================================
+   Hover Effects
+   ============================================ */
+
+.ai-response-card {
+  transition: all 0.3s ease;
+}
+
+.ai-response-card:hover {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ============================================
+   Animation
+   ============================================ */
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ai-response-card {
+  animation: slideIn 0.4s ease-out;
+}
+
+/* ============================================
+   Accent Styles
+   ============================================ */
+
+.ai-response-card.accent-primary {
+  border-left: 4px solid #ff6b6b;
+}
+
+.ai-response-card.accent-success {
+  border-left: 4px solid #51cf66;
+}
+
+.ai-response-card.accent-warning {
+  border-left: 4px solid #ffd93d;
+}
+
+.ai-response-card.accent-info {
+  border-left: 4px solid #4dabf7;
+}
